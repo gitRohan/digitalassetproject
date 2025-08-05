@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter} from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import Navbar from "@/components/Navbar";
 
 const inter=Inter({
   variable: "--font-inter",
@@ -32,6 +33,7 @@ export default function RootLayout({
         className={cn("relative h-full font-sans antialiased",inter.className)}
       >
         <main className="relative flex flex-col min-h-screen"> 
+          <Navbar/>
           <div className="flex-1">
             {children}
           </div>
